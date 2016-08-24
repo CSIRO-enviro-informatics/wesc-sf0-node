@@ -8,12 +8,10 @@ Pre-requisite:
 
 
 Run:
-$ docker build --no-cache -t wescnode .
-$ docker run -p 2223:22 -p 8444:443 wescnode
-
+./run.sh
 
 In a browser try:
- https://localhost:8444/geoserver
+ https://localhost:8110/geoserver
 
 
 Advanced
