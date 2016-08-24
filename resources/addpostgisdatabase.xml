@@ -1,0 +1,13 @@
+
+<dataStore>
+  <name>geoserver</name>
+  <connectionParameters>
+    <host>localhost</host>
+    <port>5432</port>
+    <database>geoserver</database>
+    <user>geoserver-admin</user>
+    <passwd>admin#siss3</passwd>
+    <dbtype>postgis</dbtype>
+	<entry key="validate connections">true</entry>
+  </connectionParameters>
+</dataStore>

@@ -1,0 +1,15 @@
+<layer>
+  <name>CombinedMeterReadings</name>
+  <id>LayerInfoImpl--77d01f4:1471f2e587e:-7ff7</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--11d0b723:1471f2c4863:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--77d01f4:1471f2e587e:-7ff8</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

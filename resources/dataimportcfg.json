@@ -1,0 +1,100 @@
+{
+    "imports": [
+    {
+        "id": "combinedmeterreadings-esaa",
+        "name": "ESAA Electricity Consumption Data",
+        "etlgenerate": "ESAA/esaa-etl.py",
+        "etlscript": "combinedmeterreadings-esaa.sql"
+    },
+    {
+        "id": "combinedmeterreadings-sydneywater-lga",
+        "name": "Sydney Water Consumption Data",
+        "etlgenerate": "SydneyWater/sydneywater-lga-etl.py",
+        "etlscript": "combinedmeterreadings-sydneywater-lga.sql"
+    },
+    {
+        "id": "combinedmeterreadings-energex-poa",
+        "name": "Energex electricty consumption",
+            "etlgenerate": "Energex/energex_poa_etl.py",
+            "etlscript": "combinedmeterreadings-energex-poa.sql"
+    },
+	{
+        "id": "combinedmeterreadings-yvw-poa",
+        "name": "YVW aggregated water consumption poa",
+        "etlgenerate": "YVW/yvw-poa-etl.py",
+        "etlscript": "combinedmeterreadings-yvw-poa.sql"
+    },
+	{
+        "id": "combinedmeterreadings-yvw-locality",
+        "name": "YVW aggregated water consumption locality",
+        "etlgenerate": "YVW/yvw-locality-etl.py",
+        "etlscript": "combinedmeterreadings-yvw-locality.sql"
+    },
+    {
+        "id": "combinedmeterreadings-ausgrid",
+        "name": "Ausgrid electricty consumption",
+            "etlgenerate": "Ausgrid/ausgrid-etl.py",
+            "etlscript": "combinedmeterreadings-ausgrid.sql"
+    },
+    {
+        "id": "combinedmeterreadings-nongenmeters-abs",
+        "name": "ABS non generating consumption",
+            "etlgenerate": "ABS/abs-nongenmeters-etl.py",
+            "etlscript": "combinedmeterreadings-nongenmeters-abs.sql"
+    },
+    {
+        "id": "electricitysupply-abs",
+        "name": "ABS Electricity Supply Data",
+            "etlgenerate": "ABS/abs-etl.py",
+            "etlscript": "electricitysupply-abs.sql"
+    },
+    {
+        "id": "watersupply-nwc",
+        "name": "NWC Water Supply Data",
+        "etlgenerate": "NWC/nwc-etl.py",
+        "etlscript": "watersupply-nwc.sql"
+    },
+    {
+        "id": "combinedmeterreadings-actewwater",
+        "name": "ACTEW water consumption",
+        "etlgenerate": "ACTEW Water/actewwater-consumption-etl.py",
+        "etlscript": "combinedmeterreadings-actewwater.sql"
+    },
+    {
+        "id": "watersupply-actewwater",
+        "name": "ACTEW water supply",
+        "etlgenerate": "ACTEW Water/actewwater-supply-etl.py",
+        "etlscript": "watersupply-actewwater.sql"
+    },
+    {
+        "id": "combinedmeterreadings-suburb-actewagl",
+        "name": "ACTEW AGL suburb consumption",
+        "etlgenerate": "ACTEW AGL/actewagl-suburb-etl.py",
+        "etlscript": "combinedmeterreadings-suburb-actewagl.sql"
+    },
+    {
+        "id": "combinedmeterreadings-postcode-actewagl",
+        "name": "ACTEW AGL postcode consumption",
+        "etlgenerate": "ACTEW AGL/actewagl-postcode-etl.py",
+        "etlscript": "combinedmeterreadings-postcode-actewagl.sql"
+    },
+	{
+        "id": "combinedmeterreadings-ballarat-chw",
+        "name": "CHW water consumption",
+        "etlgenerate": "CHW/chw-ballarat-etl.py",
+        "etlscript": "combinedmeterreadings-ballarat-chw.sql"
+    },
+	{
+        "id": "combinedmeterreadings-yvw-aggregated",
+        "name": "YVW aggregated water consumption",
+        "etlgenerate": "YVW/yvw-sample2-etl.py",
+        "etlscript": "combinedmeterreadings-yvw-sample2.sql"
+    },
+	{
+        "id": "combinedmeterreadings-yvw-individual",
+        "name": "YVW individual site water consumption",
+        "etlgenerate": "YVW/yvw-sample1-etl.py",
+        "etlscript": "combinedmeterreadings-yvw-sample1.sql"
+    }
+    ]
+}

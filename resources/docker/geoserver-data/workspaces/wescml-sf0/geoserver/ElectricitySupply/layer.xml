@@ -1,0 +1,15 @@
+<layer>
+  <name>ElectricitySupply</name>
+  <id>LayerInfoImpl--77d01f4:1471f2e587e:-7ff9</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--11d0b723:1471f2c4863:-8000</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--77d01f4:1471f2e587e:-7ffa</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

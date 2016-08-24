@@ -1,0 +1,66 @@
+<featureType>
+  <name>CombinedMeterReadings</name>
+  <nativeName>CombinedMeterReadings</nativeName>
+  <namespace>
+    <name>wescml-sf0</name>
+    <atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="alternate" href="https://localhost:12345/geoserver/rest/namespaces/wescml.xml" type="application/xml"/>
+  </namespace>
+  <title>CombinedMeterReadings</title>
+  <keywords>
+    <string>CombinedMeterReadings</string>
+    <string>features</string>
+  </keywords>
+  <nativeCRS>GEOGCS[&quot;GDA94&quot;,
+  DATUM[&quot;Geocentric Datum of Australia 1994&quot;,
+    SPHEROID[&quot;GRS 1980&quot;, 6378137.0, 298.257222101, AUTHORITY[&quot;EPSG&quot;,&quot;7019&quot;]],
+    TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+    AUTHORITY[&quot;EPSG&quot;,&quot;6283&quot;]],
+  PRIMEM[&quot;Greenwich&quot;, 0.0, AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]],
+  UNIT[&quot;degree&quot;, 0.017453292519943295],
+  AXIS[&quot;Geodetic longitude&quot;, EAST],
+  AXIS[&quot;Geodetic latitude&quot;, NORTH],
+  AUTHORITY[&quot;EPSG&quot;,&quot;4283&quot;]]</nativeCRS>
+  <srs>EPSG:4283</srs>
+  <nativeBoundingBox>
+    <minx>145.02069</minx>
+    <maxx>145.05526</maxx>
+    <miny>-37.972463</miny>
+    <maxy>-37.942789</maxy>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>145.02069</minx>
+    <maxx>145.05525999999998</maxx>
+    <miny>-37.972462999084634</miny>
+    <maxy>-37.94278899908487</maxy>
+    <crs>GEOGCS[&quot;WGS84(DD)&quot;,
+  DATUM[&quot;WGS84&quot;,
+    SPHEROID[&quot;WGS84&quot;, 6378137.0, 298.257223563]],
+  PRIMEM[&quot;Greenwich&quot;, 0.0],
+  UNIT[&quot;degree&quot;, 0.017453292519943295],
+  AXIS[&quot;Geodetic longitude&quot;, EAST],
+  AXIS[&quot;Geodetic latitude&quot;, NORTH]]</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <metadata>
+    <entry key="JDBC_VIRTUAL_TABLE">
+      <virtualTable>
+        <name>CombinedMeterReadings</name>
+        <sql>select &quot;aggregationID&quot;, &quot;commodityType&quot;, &quot;utilityID&quot;, &quot;utilityName&quot;, &quot;timeName&quot;, &quot;aggregationStartDateTime&quot;, &quot;aggregationEndDateTime&quot;, &quot;geometryID&quot;, &quot;spatialRepresentation&quot;, &quot;propertyTypeURI&quot;, &quot;propertyType&quot; as &quot;propertyTypeLabel&quot;, &quot;resultProcedure&quot;, &quot;unitsURI&quot;, &quot;unitsLabel&quot;, &quot;numberOfMeters&quot;, &quot;numberOfReadings&quot;, &quot;resultTotal&quot;, &quot;resultAverage&quot;, &quot;resultMedian&quot;&#xd;
+from combinedmeterreadings</sql>
+        <escapeSql>false</escapeSql>
+        <geometry>
+          <name>spatialRepresentation</name>
+          <type>Polygon</type>
+          <srid>4283</srid>
+        </geometry>
+      </virtualTable>
+    </entry>
+  </metadata>
+  <store class="dataStore">
+    <name>geoserver</name>
+    <atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="alternate" href="https://localhost:12345/geoserver/rest/workspaces/wescml/datastores/geoserver.xml" type="application/xml"/>
+  </store>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+</featureType>

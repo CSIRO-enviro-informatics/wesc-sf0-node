@@ -1,0 +1,19 @@
+<dataStore>
+  <id>DataStoreInfoImpl--77d01f4:1471f2e587e:-7ffe</id>
+  <name>geoserver</name>
+  <type>PostGIS</type>
+  <enabled>true</enabled>
+  <workspace>
+    <id>WorkspaceInfoImpl--77d01f4:1471f2e587e:-8000</id>
+  </workspace>
+  <connectionParameters>
+    <entry key="port">5432</entry>
+    <entry key="passwd">plain:geoserver</entry>
+    <entry key="dbtype">postgis</entry>
+    <entry key="host">localhost</entry>
+    <entry key="user">geoserver-admin</entry>
+    <entry key="database">geoserver</entry>
+    <entry key="namespace">http://wescml.org/schemas/SF-0/1.0/wescml-sf0</entry>
+  </connectionParameters>
+  <__default>false</__default>
+</dataStore>
