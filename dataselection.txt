@@ -1,1 +1,1 @@
-sydney-ex	combinedmeterreadings-sydneywater-lga	8110
+sydney-ex	combinedmeterreadings-sydney-example-lga	8110

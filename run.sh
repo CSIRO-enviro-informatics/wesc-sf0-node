@@ -2,7 +2,7 @@
 #set -x
 #echo on
 
-CONFIG=dataselections.txt
+CONFIG=dataselection.txt
 while read i; 
 do 
    OLDIFS=$IFS

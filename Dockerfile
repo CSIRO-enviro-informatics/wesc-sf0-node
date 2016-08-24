@@ -1,8 +1,6 @@
 # https://github.com/CSIRO-enviro-informatics/docker-geoserver
 FROM csiro_env/geoserver 
 
-RUN chmod 700 /root/.ssh/*
-
 #Install apache with ssl (from https://registry.hub.docker.com/u/eboraas/apache/dockerfile) and proxy_ajp
 #need to remove this file since apt-get update returns error due to 404
 RUN rm -f /etc/apt/sources.list.d/pitti-postgresql-trusty.list
@@ -21,6 +19,13 @@ RUN /bin/ln -sf ../mods-available/ssl.load /etc/apache2/mods-enabled/
 RUN a2enmod proxy_ajp
 RUN a2enmod socache_shmcb.load
 RUN a2enmod headers 
+
+# import selected AURIN 6/2 data 
+ADD data /data
+ADD resources /resources
+ADD dataimportcfg.json /resources/dataimportcfg.json
+ADD dataimportselection.txt /resources/dataimportselection.txt
+RUN /etc/init.d/postgresql start && /usr/bin/python /resources/selectedbatchimport.py /data /resources/dataimportcfg.json /resources/dataimportselection.txt 
 
 # configure proxy to tomcat 
 RUN /bin/ln -sf /resources/docker/25-siss-ssl.conf /etc/apache2/sites-available/25-siss-ssl.conf 
@@ -54,12 +59,6 @@ USER root
 RUN rm -rf /opt/geoserver_data && rm -rf /opt/tomcat7/webapps/geoserver/data && /bin/ln -sf /resources/docker/geoserver-data /opt/geoserver_data
  
 
-# import selected AURIN 6/2 data 
-ADD data /data
-ADD resources /resources
-ADD dataimportcfg.json /resources/dataimportcfg.json
-ADD dataimportselection.txt /resources/dataimportselection.txt
-RUN /etc/init.d/postgresql start && /usr/bin/python /resources/selectedbatchimport.py /data /resources/dataimportcfg.json /resources/dataimportselection.txt 
 
 
 ENV GEOSERVER_DATA_DIR  /opt/geoserver_data

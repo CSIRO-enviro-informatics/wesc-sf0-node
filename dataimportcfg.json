@@ -5,6 +5,6 @@
         "name": "Example Sydney Consumption Data for water",
         "etlgenerate": "example/example-sydney-lga-etl.py",
         "etlscript": "combinedmeterreadings-sydney-lga.sql"
-    },
+    }
     ]
 }
