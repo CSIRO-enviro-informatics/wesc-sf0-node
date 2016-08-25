@@ -25,7 +25,7 @@ To test if this is working - in a browser try:
 If you need to co-ordinate multiple wesc node deployments, this repo has text files to specify the details.
 
 ###dataselection.txt
-- This file takes tab-separated parameters (<name> <etl-config id> <exposed port number>)  each row and deploy a node
+- This file takes tab-separated parameters (\<name\> \<etl-config id\> \<exposed port number\>)  each row and deploy a node
 - To add a new node, simply add a new row with details to the ETL files and port numbers
 - Example: 
 sydney-ex       combinedmeterreadings-sydneywater-lga   8110
@@ -33,10 +33,10 @@ sydney-ex       combinedmeterreadings-sydneywater-lga   8110
 
 ###dataimportcfg.txt
 - This file contains the etl-config details for each deployment and contains details for 4 fields:
-  1) etl-config id. This is used to map a node with the spcific wesc element - combinedmeterreadings, watersupply or electricitysupply
-  2) name. Description for the etl-config
-  3) etlgenerate. This points to relative path to the directory containing the etl script
-  3) etlscript. This points to relative path to the SQL etl script as output.
+  * etl-config id. This is used to map a node with the spcific wesc element - combinedmeterreadings, watersupply or electricitysupply
+  * name. Description for the etl-config
+  * etlgenerate. This points to relative path to the directory containing the etl script
+  * etlscript. This points to relative path to the SQL etl script as output.
 - Example:
     {
         "id": "combinedmeterreadings-sydneywater-lga",
