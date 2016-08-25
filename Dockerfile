@@ -25,7 +25,6 @@ ADD data /data
 ADD resources /resources
 ADD dataimportcfg.json /resources/dataimportcfg.json
 ADD dataimportselection.txt /resources/dataimportselection.txt
-RUN /etc/init.d/postgresql start && /usr/bin/python /resources/selectedbatchimport.py /data /resources/dataimportcfg.json /resources/dataimportselection.txt 
 
 # configure proxy to tomcat 
 RUN /bin/ln -sf /resources/docker/25-siss-ssl.conf /etc/apache2/sites-available/25-siss-ssl.conf 
@@ -54,6 +53,9 @@ USER postgres
 RUN /etc/init.d/postgresql start &&\
     psql -h localhost -d geoserver -U geoserver-admin -w -f /resources/WESCDDL.sql && /etc/init.d/postgresql stop
 USER root 
+
+# import selected AURIN 6/2 data 
+RUN /etc/init.d/postgresql start && /usr/bin/python /resources/selectedbatchimport.py /data /resources/dataimportcfg.json /resources/dataimportselection.txt 
 
 # configure geoserver 
 RUN rm -rf /opt/geoserver_data && rm -rf /opt/tomcat7/webapps/geoserver/data && /bin/ln -sf /resources/docker/geoserver-data /opt/geoserver_data

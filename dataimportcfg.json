@@ -1,7 +1,7 @@
 {
     "imports": [
     {
-        "id": "combinedmeterreadings-sydneywater-lga",
+        "id": "combinedmeterreadings-sydney-example-lga",
         "name": "Example Sydney Consumption Data for water",
         "etlgenerate": "example/example-sydney-lga-etl.py",
         "etlscript": "combinedmeterreadings-sydney-lga.sql"
