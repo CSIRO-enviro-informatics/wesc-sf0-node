@@ -83,7 +83,7 @@ command=/opt/tomcat7/bin/catalina.sh run\n\
 [program:apache2]\n\
 command=apachectl -D "FOREGROUND" -k start\n\
 [program:postgresql]\n\
-command=su postgres -c "/usr/lib/postgresql/9.3/bin/postgres -D /var/lib/postgresql/9.3/main -c config_file=/etc/postgresql/9.3/main/postgresql.conf" /usr/local/pgsql/data\n\
+command=su postgres -c "/usr/lib/postgresql/9.5/bin/postgres -D /var/lib/postgresql/9.5/main -c config_file=/etc/postgresql/9.5/main/postgresql.conf" /usr/local/pgsql/data\n\
 \n\
 [include]\n\
 files = /etc/supervisor/conf.d/*.conf' > /etc/supervisor/conf.d/supervisord.conf
