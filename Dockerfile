@@ -36,6 +36,7 @@ RUN /bin/ln -sf /resources/docker/server.xml /opt/tomcat7/conf/server.xml
 #Setup Python 
 RUN locale-gen en_AU.utf8
 RUN apt-get install -y python python-pip python-dev
+RUN pip install cython 
 RUN pip install xlrd pint petl pandas
 
 
@@ -44,18 +45,18 @@ ENV PGPASSWORD geoserver
 
 # create postgres user and database
 USER postgres
-RUN /etc/init.d/postgresql start &&\
+RUN /etc/init.d/postgresql start && sleep 10 &&\
     psql --command "CREATE USER \"geoserver-admin\" WITH SUPERUSER PASSWORD 'geoserver';" && createdb -O geoserver-admin geoserver && psql geoserver -c "CREATE EXTENSION postgis;CREATE EXTENSION postgis_topology;" && /etc/init.d/postgresql stop
 USER root 
 
-# create wesc database structure
+## create wesc database structure
 USER postgres 
-RUN /etc/init.d/postgresql start &&\
-    psql -h localhost -d geoserver -U geoserver-admin -w -f /resources/WESCDDL.sql && /etc/init.d/postgresql stop
+RUN /etc/init.d/postgresql start \
+    && sleep 10 && psql -h localhost -d geoserver -U geoserver-admin -w -f /resources/WESCDDL.sql && /etc/init.d/postgresql stop
 USER root 
 
 # import selected AURIN 6/2 data 
-RUN /etc/init.d/postgresql start && /usr/bin/python /resources/selectedbatchimport.py /data /resources/dataimportcfg.json /resources/dataimportselection.txt 
+RUN /etc/init.d/postgresql start && sleep 10  && /usr/bin/python /resources/selectedbatchimport.py /data /resources/dataimportcfg.json /resources/dataimportselection.txt 
 
 # configure geoserver 
 RUN rm -rf /opt/geoserver_data && rm -rf /opt/tomcat7/webapps/geoserver/data && /bin/ln -sf /resources/docker/geoserver-data /opt/geoserver_data
