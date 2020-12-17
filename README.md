@@ -3,6 +3,10 @@
 This repository provides a standardised method for deploying a Spatial Information Services Stack (SISS) configured
 for WESCML (http://wescml.org) for SF-0.
 
+Attribution Statement: Yu, Jonathan; Leighton, Ben; Mirza, Fareed; Singh, Ramneek (2016): WESCML-SF0 Node. v1. CSIRO. Software Collection. 10.25919/phyb-a160
+Persistent Link: https://doi.org/10.25919/phyb-a160 
+
+
 ## Pre-requisite:
 wesc-sf0-node requires running on a Linux environment supporting  Docker. This package has been tested using Ubuntu Linux 14.10.
 
